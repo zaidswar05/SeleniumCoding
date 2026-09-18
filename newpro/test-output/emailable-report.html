@@ -9,10 +9,25 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default Suite</th></tr>
-<tr><td><a href="#t0">newpro</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7,812</td><td></td><td></td></tr>
+<tr><td><a href="#t0">newpro</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,073</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">newpro &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Day3.HandledUnexpectedAlert.TestNg.TestNgg</td><td><a href="#m0">testPositiveLoginSauceDemo</a></td><td rowspan="1">1789645608924</td><td rowspan="1">4825</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">newpro &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Capstone_Project.Capstone</td><td><a href="#m0">testAddProductsAndCheckout</a></td><td rowspan="1">1789732793366</td><td rowspan="1">15654</td></tr><tr><th colspan="4">newpro &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Capstone_Project.Capstone</td><td><a href="#m1">testNegativeLoginSauceDemo</a></td><td rowspan="1">1789732788924</td><td rowspan="1">3406</td></tr><tr class="passedeven"><td><a href="#m2">testPositiveLoginSauceDemo</a></td><td rowspan="1">1789732783020</td><td rowspan="1">4904</td></tr></tbody>
 </table>
-<h2>newpro</h2><h3 id="m0">Day3.HandledUnexpectedAlert.TestNg.TestNgg#testPositiveLoginSauceDemo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>newpro</h2><h3 id="m0">Capstone_Project.Capstone#testAddProductsAndCheckout</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.className: shopping_cart_badge to contain text &quot;2&quot;. Current text: &quot;3&quot;.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.47, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\ccst\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60027}, goog:processID: 15636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60027/devtoo..., se:cdpVersion: 153.0.8010.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 594c978ba927ed1eb257eefb9a561760
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at Capstone_Project.Capstone.testAddProductsAndCheckout(Capstone.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Capstone_Project.Capstone#testNegativeLoginSauceDemo</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Capstone_Project.Capstone#testPositiveLoginSauceDemo</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

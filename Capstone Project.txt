@@ -1,0 +1,15 @@
+https://www.saucedemo.com/
+
+1 Test NG test scenarios 
+	login positive and negative scenario
+	Select 3 products add to cart - check cart contents - should be 3
+	Remove 1 product from cart using Romove button and product page - check cart content - shoul be 2 
+	checkout item from cart
+	check filter price low to high
+	logout 
+2. Externalise data using @Dataprovider
+3.Use annotations @BeforeMethod, @Test , @AfterMethod
+4.Use Assertions for each teastcase
+5. Run all test cases using testNG.xml
+
+Selenium TestNG Framework Review and Fixes

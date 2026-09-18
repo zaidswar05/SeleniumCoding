@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Default Suite</span>
+              <span class="suite-name border-failed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="Capstone_Project.Capstone" class="method navigator-link" hash-for-method="testAddProductsAndCheckout(standard_user, secret_sauce)">testAddProductsAndCheckout(standard_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,12 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="Day3.HandledUnexpectedAlert.TestNg.TestNgg" class="method navigator-link" hash-for-method="testPositiveLoginSauceDemo">testPositiveLoginSauceDemo</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="Capstone_Project.Capstone" class="method navigator-link" hash-for-method="testNegativeLoginSauceDemo(user, secret_sauce)">testNegativeLoginSauceDemo(user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="Capstone_Project.Capstone" class="method navigator-link" hash-for-method="testPositiveLoginSauceDemo(standard_user, secret_sauce)">testPositiveLoginSauceDemo(standard_user, secret_sauce)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -118,17 +137,57 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-passed">
+          <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Day3.HandledUnexpectedAlert.TestNg.TestNgg</span>
+              <img src="failed.png"/>
+              <span class="class-name">Capstone_Project.Capstone</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPositiveLoginSauceDemo">
-                  </a> <!-- testPositiveLoginSauceDemo -->
+                  <a name="testAddProductsAndCheckout(standard_user, secret_sauce)">
+                  </a> <!-- testAddProductsAndCheckout(standard_user, secret_sauce) -->
+                  <span class="method-name">testAddProductsAndCheckout</span>
+                  <span class="parameters">(standard_user,secret_sauce)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.className: shopping_cart_badge to contain text &quot;2&quot;. Current text: &quot;3&quot;.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.47, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\ccst\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60027}, goog:processID: 15636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60027/devtoo..., se:cdpVersion: 153.0.8010.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 594c978ba927ed1eb257eefb9a561760
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at Capstone_Project.Capstone.testAddProductsAndCheckout(Capstone.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-failed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Capstone_Project.Capstone</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNegativeLoginSauceDemo(user, secret_sauce)">
+                  </a> <!-- testNegativeLoginSauceDemo(user, secret_sauce) -->
+                  <span class="method-name">testNegativeLoginSauceDemo</span>
+                  <span class="parameters">(user,secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPositiveLoginSauceDemo(standard_user, secret_sauce)">
+                  </a> <!-- testPositiveLoginSauceDemo(standard_user, secret_sauce) -->
                   <span class="method-name">testPositiveLoginSauceDemo</span>
+                  <span class="parameters">(standard_user,secret_sauce)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,7 +204,7 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;newpro&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Day3.HandledUnexpectedAlert.TestNg.TestNgg&quot;/&gt;
+      &lt;class name=&quot;Capstone_Project.Capstone&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- newpro --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -185,16 +244,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPositiveLoginSauceDemo')
-data.setCell(0, 2, 'Day3.HandledUnexpectedAlert.TestNg.TestNgg')
-data.setCell(0, 3, 4825);
+data.setCell(0, 1, 'testAddProductsAndCheckout')
+data.setCell(0, 2, 'Capstone_Project.Capstone')
+data.setCell(0, 3, 15654);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testPositiveLoginSauceDemo')
+data.setCell(1, 2, 'Capstone_Project.Capstone')
+data.setCell(1, 3, 4904);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testNegativeLoginSauceDemo')
+data.setCell(2, 2, 'Capstone_Project.Capstone')
+data.setCell(2, 3, 3406);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -220,18 +287,44 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Day3.HandledUnexpectedAlert.TestNg.TestNgg</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Capstone_Project.Capstone</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testPositiveLoginSauceDemo</span>
-                <span class="method-start">2730 ms</span>
+                <span class="method-name">testPositiveLoginSauceDemo(standard_user, secret_sauce)</span>
+                <span class="method-start">1730 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7557 ms</span>
+                <span class="method-start">6636 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">6842 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testNegativeLoginSauceDemo(user, secret_sauce)</span>
+                <span class="method-start">7634 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11040 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">11214 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddProductsAndCheckout(standard_user, secret_sauce)</span>
+                <span class="method-start">12076 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27737 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
